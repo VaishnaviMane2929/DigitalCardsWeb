@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>navbar</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <link rel="stylesheet" href="css/navbar.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.4.0/uicons-thin-rounded/css/uicons-thin-rounded.css"
+    />
+
+    <!-- Optional: icon font (Flaticon UIcons) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.4.0/uicons-thin-rounded/css/uicons-thin-rounded.css"
+    />
+
+    <style>
+      /* body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: #f0f0f0;
+      } */
+
+      .swiper-section {
+        background-color: #fff;
+        padding: 10px;
+        position: relative;
+        margin-top: 20px;
+      }
+
+      .swiper {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .swiper-slide {
+        width: 300px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        color: #333;
+        background: white;
+        border-radius: 50%;
+        padding: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar Start -->
+    <div class="multi_dash_div fixed-navbar">
+      <div class="px-0">
+        <nav class="nav-bar">
+          <div
+            class="d-flex col-md-12 py-1 mx-0 px-2 justify-content-between grocery-d-flex"
+          >
+            <div class="col-md-2">
+              <div class="logo d-flex">
+                <div>
+                  <!-- <img src="img/logo1.png" /> -->
+                </div>
+                <span class="logo-title">BizVisitingCards</span>
+              </div>
+            </div>
+
+            <div
+              class="col-md-4 grocery-navres my-auto offset-5 d-flex justify-content-end gap-3"
+            >
+              <div class="customer-support-res">
+                <span>Customer Helpline</span>
+                <span class="fw-bold d-block"
+                  ><i class="fa-solid fa-phone"></i> 9090909090
+                </span>
+              </div>
+
+              <span class="dropdown my-auto">
+                <div
+                  class="nav-icon d-flex gap-2"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img src="img/pro.png.jpg" alt="" />
+                  <!-- <i class="fa-solid fa-user"></i> -->
+                  <h6 class="my-auto mob-hide-login">
+                    Login <i class="fa-solid fa-chevron-down"></i>
+                  </h6>
+                </div>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li>
+                    <a href="login.html" class="dropdown-item px-2" onclick="Login()">
+                      <i class="fa-solid fa-right-from-bracket"></i
+                      >&nbsp;Login</a
+                    >
+                  </li>
+                  <li>
+                    <a href="register.html" class="dropdown-item px-2" onclick="SignUp()">
+                      <i class="fa-solid fa-right-from-bracket"></i
+                      >&nbsp;SignUp</a
+                    >
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="p-1 border" style="background-color: #f8f9fa">
+        <div class="">
+          <div
+            class="bg-white d-flex gap-5 px-3 categogy-nav-res"
+            style="box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%)"
+          >
+            <a
+              href="navbar.html"
+              id="Home_tab"
+              class="text-center nav-btn py-3"
+            >
+              <!-- <img src="https://gotejaga.com/assest/img/online-shopping.png" /> -->
+              <i class="fa-solid fa-house"></i>
+              <span>Home</span>
+            </a>
+            <a
+              href="Example.html"
+              id="Example_tab"
+              class="text-center nav-btn py-3"
+            >
+              <!-- <img src="https://gotejaga.com/assest/img/fast-food.png" /> -->
+              <i class="fa-solid fa-thumbs-up"></i>
+              <span>Example</span>
+            </a>
+            <a href="Pricing.html" class="text-center nav-btn py-3">
+              <!-- <img src="https://gotejaga.com/assest/img/job.png" /> -->
+              <i class="fa-solid fa-indian-rupee-sign"></i>
+              <span>Pricing</span>
+            </a>
+            <a href="Howitworks.html" class="text-center nav-btn py-3">
+              <!-- <img src="https://gotejaga.com/assest/img/wedding.png" /> -->
+              <i class="fa-solid fa-circle-question"></i>
+              <span>How It Work's</span>
+            </a>
+
+            <a href="Service.html" class="text-center nav-btn py-3">
+              <!-- <img src="https://gotejaga.com/assest/img/customer-service.png" /> -->
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span>Services</span>
+            </a>
+            <a href="Contact.html" class="text-center nav-btn py-3">
+              <!-- <img src="https://gotejaga.com/assest/img/cab.png" /> -->
+              <i class="fa-solid fa-phone"></i>
+              <span>Contact</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- navbar Ends -->
+
+    <!-- Swiper Section -->
+    <section class="swiper-section">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGT-mbwE3RAQY66dIPZvu7rxdYBIFiTZAFk1h9AS-MJJnsHXBPPJTghINXmpg9C_SrTio&usqp=CAU"
+              alt="Card 1"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGT-mbwE3RAQY66dIPZvu7rxdYBIFiTZAFk1h9AS-MJJnsHXBPPJTghINXmpg9C_SrTio&usqp=CAU"
+              alt="Card 2"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGT-mbwE3RAQY66dIPZvu7rxdYBIFiTZAFk1h9AS-MJJnsHXBPPJTghINXmpg9C_SrTio&usqp=CAU"
+              alt="Card 3"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGT-mbwE3RAQY66dIPZvu7rxdYBIFiTZAFk1h9AS-MJJnsHXBPPJTghINXmpg9C_SrTio&usqp=CAU"
+              alt="Card 4"
+            />
+          </div>
+
+          <div class="swiper-slide">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGT-mbwE3RAQY66dIPZvu7rxdYBIFiTZAFk1h9AS-MJJnsHXBPPJTghINXmpg9C_SrTio&usqp=CAU"
+              alt="Card 5"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGT-mbwE3RAQY66dIPZvu7rxdYBIFiTZAFk1h9AS-MJJnsHXBPPJTghINXmpg9C_SrTio&usqp=CAU"
+              alt="Card 5"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGT-mbwE3RAQY66dIPZvu7rxdYBIFiTZAFk1h9AS-MJJnsHXBPPJTghINXmpg9C_SrTio&usqp=CAU"
+              alt="Card 5"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGT-mbwE3RAQY66dIPZvu7rxdYBIFiTZAFk1h9AS-MJJnsHXBPPJTghINXmpg9C_SrTio&usqp=CAU"
+              alt="Card 5"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGT-mbwE3RAQY66dIPZvu7rxdYBIFiTZAFk1h9AS-MJJnsHXBPPJTghINXmpg9C_SrTio&usqp=CAU"
+              alt="Card 5"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGT-mbwE3RAQY66dIPZvu7rxdYBIFiTZAFk1h9AS-MJJnsHXBPPJTghINXmpg9C_SrTio&usqp=CAU"
+              alt="Card 5"
+            />
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+
+    <section class="opportunity-section">
+      <div class="opportunity-container">
+        <div class="text-content">
+          <h2><span>One business card,</span><br />infinite opportunities</h2>
+          <p>
+            Showcase your work like never before with a business card. Upload
+            rich content such as photos, videos, and custom links to express
+            yourself in new and dynamic ways.
+          </p>
+        </div>
+        <div class="image-box">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2760/2760590.png"
+            alt="Business Card Opportunities"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="mobility-section">
+      <div class="mobility-container">
+        <div class="image-box">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2760/2760590.png"
+            alt="Mobility Visual"
+          />
+        </div>
+        <div class="mobility-text">
+          <h2><span>Mobility</span> at its best</h2>
+          <p>
+            Connect with your customers directly through their mobile phones.
+            Use our sharing options to spread your brand and make your
+            <strong>BigOsoftware</strong> go viral among clients and friends.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="opportunity-section">
+      <div class="opportunity-container">
+        <div class="text-content">
+          <h2><span>Business cards enter the </span><br />digital age</h2>
+          <p>
+            Create your business card in just 10 minutes simple, stylish, and
+            free. BizVisitingCards is always at your fingertips, never wears
+            out, and is endlessly shareable. With our intuitive dashboard, you
+            can update your BizVisitingCards anytime, eliminating the need for
+            reprints.
+          </p>
+        </div>
+        <div class="image-box">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2760/2760590.png"
+            alt="Business Card Opportunities"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- How it Works Start -->
+    <section class="how-it-works">
+      <h2 class="section-title">How it Works?</h2>
+      <div class="steps-container">
+        <!-- Step 1 -->
+        <div class="step-box">
+          <div class="step-img">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/847/847969.png"
+              alt="Create your own"
+            />
+            <span class="step-number">1</span>
+          </div>
+          <h4>Create your Own</h4>
+          <p>It takes 10 minutes. <a href="#">Click here to begin</a></p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-box">
+          <div class="step-img">
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/005/162/906/non_2x/share-icon-sharing-social-media-in-frame-circular-free-vector.jpg"
+              alt="Save to device"
+            />
+            <span class="step-number">2</span>
+          </div>
+          <h4>Save to your Device</h4>
+          <p>BizVisitingCard is accessible anytime from anywhere</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-box">
+          <div class="step-img">
+            <img
+              src="https://i.ytimg.com/vi/WmY97xdhuug/maxresdefault.jpg"
+              alt="Share with others"
+            />
+            <span class="step-number">3</span>
+          </div>
+          <h4>Share with friends and colleagues</h4>
+          <p>through a variety of channels</p>
+        </div>
+      </div>
+
+      <div class="learn-more-btn">
+        <a href="#">Learn More</a>
+      </div>
+    </section>
+    <!-- How it Works ends -->
+
+    <!-- Counter Start -->
+    <section class="stats-section">
+      <h2 class="section-title">OUR ACHIVEMENTS</h2>
+      <div class="container">
+        <div class="stat-box">
+          <p class="stat-label">CLIENTS</p>
+          <h2 class="stat-number" data-target="1000">0</h2>
+          <p class="stat-description">WEBSITES CREATED</p>
+        </div>
+        <div class="stat-box">
+          <p class="stat-label">CARD VIEWS</p>
+          <h2 class="stat-number" data-target="750">0</h2>
+          <p class="stat-description">COMPANIES HELPED</p>
+        </div>
+        <div class="stat-box">
+          <p class="stat-label">OF TREES TO CONSERVE</p>
+          <h2 class="stat-number" data-target="60">0</h2>
+          <p class="stat-description">YEARS COMBINED EXPERIENCE</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Counter Ends -->
+
+    <!-- Find Your Best Card Start -->
+    <div
+      class="container-fluid mt-1 row mx-0 p-0 position-relative mrg-sec"
+      id="BestCard"
+    >
+      <div class="col-md-12" style="background: #ffffffd9">
+        <div class="col-md-10 row mx-auto text-center py-4">
+          <div class="col-md-3">
+            <div class="mob-hide-matrimony">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGT-mbwE3RAQY66dIPZvu7rxdYBIFiTZAFk1h9AS-MJJnsHXBPPJTghINXmpg9C_SrTio&usqp=CAU"
+                alt=""
+                class="pp-img position-relative"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h2>FIND YOUR BEST CARD</h2>
+            <div class="bar"></div>
+            <h3 class="fw-bold mt-2">
+              <span class="text-danger">Register FREE!</span>
+            </h3>
+            <div class="d-flex justify-content-center gap-3 mx-auto mt-5">
+              <div
+                class="mrg-sec-ico bg-danger border border-white border-3 rounded-3 px-1 py-3 col-md-2 aos-init"
+                data-aos="flip-right"
+                data-aos-easing="linear"
+                data-aos-duration="1500"
+              >
+                <img
+                  class="border border-danger border-2"
+                  src="https://bitspanindia.co.in/assets/img/verification.png"
+                />
+                <span class="d-block text-light fw-bold"
+                  >Verified <br />Profiles</span
+                >
+              </div>
+              <div
+                class="mrg-sec-ico bg-danger border border-white border-3 rounded-3 px-1 py-3 col-md-2 aos-init"
+                data-aos="flip-left"
+                data-aos-easing="linear"
+                data-aos-duration="1500"
+              >
+                <img
+                  class="border border-danger border-2"
+                  src="https://bitspanindia.co.in/assets/img/reliable.png"
+                />
+                <span class="d-block text-light fw-bold"
+                  >Trusted <br />Brands</span
+                >
+              </div>
+              <div
+                class="mrg-sec-ico bg-danger border border-white border-3 rounded-3 px-1 py-3 col-md-2 aos-init"
+                data-aos="flip-right"
+                data-aos-easing="linear"
+                data-aos-duration="1500"
+              >
+                <img
+                  class="border border-danger border-2"
+                  src="https://bitspanindia.co.in/assets/img/success.png"
+                />
+                <span class="d-block text-light fw-bold"
+                  >100% <br />Success</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 my-auto">
+            <div class="d-flex gap-2 mt-5">
+              <i class="fa-solid fa-user" style="color: #fa4a6f"></i>
+              <h5 class="my-auto" style="color: #fa4a6f">
+                100% Screened Profiles
+              </h5>
+            </div>
+            <hr />
+            <div class="d-flex gap-2">
+              <i class="fa-solid fa-circle-check" style="color: #fa4a6f"></i>
+
+              <h5 class="my-auto" style="color: #fa4a6f">
+                Verification by Personal Visit
+              </h5>
+            </div>
+            <hr />
+            <div class="d-flex gap-2">
+              <i class="fa-solid fa-key" style="color: #fa4a6f"></i>
+              <h5 class="my-auto" style="color: #fa4a6f">Strong Privacy</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Find Your Best Card Ends -->
+
+    <!-- Footer Start -->
+    <footer
+      class="text-center text-lg-start bg-white text-white aos-init aos-animate footer-section position-relative"
+      data-aos="fade-up"
+      data-aos-easing="linear"
+      data-aos-duration="1500"
+      style="background: linear-gradient(to right, #07003c, #2d0b00)"
+    >
+      <section class="pt-5">
+        <div class="container-fluid text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3 text-secondary"></i>BizVisitingCards
+              </h6>
+              <p style="text-align: justify">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Obcaecati quia harum ullam, saepe fugiat ipsa laboriosam,
+                aspernatur assumenda commodi repellendus facere odio expedita
+                cumque velit nulla sequi, voluptatibus sapiente enim?
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+              <p>
+                <a
+                  href="#"
+                  class="text-decoration-none text-white"
+                  target="_blank"
+                  >Contact Us
+                </a>
+              </p>
+              <p>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="text-decoration-none text-white"
+                  >Example</a
+                >
+              </p>
+              <p>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="text-decoration-none text-white"
+                  >Terms & Condition</a
+                >
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p>
+                <i class="fas fa-home me-3 text-secondary"></i> BizVisitingCards
+              </p>
+              <p>
+                <i class="fas fa-envelope me-3 text-secondary"></i>
+                info@BizVisitingCards.com
+              </p>
+              <div class="d-flex justifyContentResFoot">
+                <div class="my-auto">
+                  <i class="fas fa-phone me-3 text-secondary"></i>
+                </div>
+                <div>
+                  <span class="d-block">+91 9999901234</span>
+                  <span class="d-block">+91 9999901234</span>
+                </div>
+              </div>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+
+      <!-- Copyright -->
+      <div
+        class="text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.025)"
+      >
+        © 2024 Copyright:
+        <a
+          class="text-reset fw-bold"
+          href="https://bitspanindia.com/"
+          target="_blank"
+          >BigOsoftware Team</a
+        >
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+    <!-- Footer Ends -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        loop: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 30,
+          stretch: 0,
+          depth: 200,
+          modifier: 1,
+          slideShadows: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          0: { slidesPerView: 1 },
+          768: { slidesPerView: "auto" },
+        },
+      });
+
+      const dot = document.getElementById("dotCursor");
+      let mouseX = 0,
+        mouseY = 0,
+        currentX = 0,
+        currentY = 0;
+
+      document.addEventListener("mousemove", (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+
+      function animate() {
+        currentX += (mouseX - currentX) * 0.15;
+        currentY += (mouseY - currentY) * 0.15;
+        dot.style.left = `${currentX}px`;
+        dot.style.top = `${currentY}px`;
+        requestAnimationFrame(animate);
+      }
+      animate();
+
+      function toggleMenu() {
+        document.getElementById("mainNav").classList.toggle("active");
+        document.getElementById("menuBtns").classList.toggle("active");
+      }
+    </script>
+
+    <!-- Counter Start -->
+    <script>
+      const counters = document.querySelectorAll(".stat-number");
+
+      counters.forEach((counter) => {
+        counter.innerText = "0";
+        const updateCount = () => {
+          const target = +counter.getAttribute("data-target");
+          const count = +counter.innerText;
+          const speed = 50; // lower = faster
+
+          const increment = Math.ceil(target / speed);
+
+          if (count < target) {
+            counter.innerText = count + increment;
+            setTimeout(updateCount, 25);
+          } else {
+            counter.innerText = target + "+"; // Add plus symbol at the end
+          }
+        };
+
+        updateCount();
+      });
+    </script>
+
+    <!-- Counter Ends -->
+  </body>
+</html>

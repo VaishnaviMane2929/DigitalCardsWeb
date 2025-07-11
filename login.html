@@ -1,159 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Login | BigOsoftwares</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
   <!-- Bootstrap 5 CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
-    body {
-      background: linear-gradient(to bottom, #d9f3ff, #e1f7ff);
-      overflow: hidden;
-      margin: 0;
-      padding: 0;
-      position: relative;
-    }
 
-    /* Aqua Bubble Animation Background */
-    .bubble {
-      position: absolute;
-      border-radius: 50%;
-      background: rgba(0, 123, 255, 0.1);
-      animation: floatBubble 20s infinite ease-in-out;
-    }
+ <style>
+  * {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
 
-    .bubble:nth-child(1) {
-      width: 80px;
-      height: 80px;
-      left: 10%;
-      bottom: -100px;
-      animation-delay: 0s;
-    }
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-    .bubble:nth-child(2) {
-      width: 100px;
-      height: 100px;
-      left: 40%;
-      bottom: -150px;
-      animation-delay: 3s;
-    }
 
-    .bubble:nth-child(3) {
-      width: 60px;
-      height: 60px;
-      left: 70%;
-      bottom: -80px;
-      animation-delay: 6s;
-    }
+  body {
+    background: linear-gradient(to bottom, #d9f3ff, #e1f7ff);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 
-    .bubble:nth-child(4) {
-      width: 90px;
-      height: 90px;
-      left: 85%;
-      bottom: -120px;
-      animation-delay: 1.5s;
-    }
+  /* ✅ NEW: content wrapper to push footer to bottom */
+  .content-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 120px; /* space for navbar */
+  padding-bottom: 80px; /* space before footer */
+}
 
-    .bubble:nth-child(5) {
-      width: 50px;
-      height: 50px;
-      left: 25%;
-      bottom: -60px;
-      animation-delay: 4.5s;
-    }
+  /* Aqua Bubble Animation Background */
+  .bubble {
+    position: fixed;
+    border-radius: 50%;
+    background: rgba(0, 123, 255, 0.1);
+    animation: floatBubble 20s infinite ease-in-out;
+    pointer-events: none;
+    z-index: 0;
+  }
 
-    @keyframes floatBubble {
-      0% {
-        transform: translateY(0) scale(1);
-        opacity: 0.7;
-      }
-      50% {
-        opacity: 1;
-        transform: translateY(-300px) scale(1.1);
-      }
-      100% {
-        transform: translateY(-600px) scale(0.9);
-        opacity: 0;
-      }
-    }
+  .bubble:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    left: 10%;
+    bottom: -100px;
+    animation-delay: 0s;
+  }
 
-    .login-box {
-      max-width: 400px;
-      margin: 80px auto;
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      position: relative;
-      z-index: 10;
-      animation: slideFadeIn 1s ease forwards;
+  .bubble:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    left: 40%;
+    bottom: -150px;
+    animation-delay: 3s;
+  }
+
+  .bubble:nth-child(3) {
+    width: 60px;
+    height: 60px;
+    left: 70%;
+    bottom: -80px;
+    animation-delay: 6s;
+  }
+
+  .bubble:nth-child(4) {
+    width: 90px;
+    height: 90px;
+    left: 85%;
+    bottom: -120px;
+    animation-delay: 1.5s;
+  }
+
+  .bubble:nth-child(5) {
+    width: 50px;
+    height: 50px;
+    left: 25%;
+    bottom: -60px;
+    animation-delay: 4.5s;
+  }
+  .input-group-text {
+  border-radius: 5px 0 0 5px;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+}
+
+.input-group .form-control {
+  border-left: none;
+}
+
+
+  @keyframes floatBubble {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 0.7;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-300px) scale(1.1);
+    }
+    100% {
+      transform: translateY(-600px) scale(0.9);
       opacity: 0;
-      transform: translateY(30px);
     }
+  }
 
-    @keyframes slideFadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+  /* Login Box */
+  .login-box {
+    max-width: 400px;
+    width: 90%;
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+    animation: slideFadeIn 1s ease forwards;
+    opacity: 0;
+    transform: translateY(30px);
+    margin: 0 auto;
+    margin-top: 120px;
+    
+  }
+
+  @keyframes slideFadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .login-box h2 {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+  }
+
+  .btn-refresh {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+
+  .btn-refresh:hover {
+    background-color: #e67e22;
+  }
+
+  .btn-login {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 1.1rem;
+  }
+
+  .btn-login:hover {
+    background-color: #45a049;
+  }
+
+  .register-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.95rem;
+  }
+
+  .register-link a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+  }
+
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+
+  .form-control {
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .captcha-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    gap: 10px;
+  }
+
+  .captcha-container img {
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex-shrink: 0;
+    width: auto;
+    max-width: 40%;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 480px) {
+    .login-box {
+      padding: 20px 15px;
+      width: 95%;
+      max-width: 350px;
     }
 
     .login-box h2 {
-      font-weight: bold;
-    }
-
-    .btn-refresh {
-      background-color: #f39c12;
-      color: white;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 5px;
-    }
-
-    .btn-refresh:hover {
-      background-color: #e67e22;
+      font-size: 1.5rem;
     }
 
     .btn-login {
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      padding: 10px;
+      font-size: 1rem;
+      padding: 12px;
     }
 
-    .btn-login:hover {
-      background-color: #45a049;
+    .captcha-container img {
+      max-width: 45%;
     }
 
-    .register-link {
-      text-align: center;
-      margin-top: 15px;
+    .btn-refresh {
+      padding: 6px 12px;
+      font-size: 0.85rem;
     }
 
-    .register-link a {
-      text-decoration: none;
-      color: #007bff;
-      font-weight: 500;
+    .content-wrapper {
+      padding-top: 100px;
+      padding-bottom: 80px;
     }
+  }
 
-    .register-link a:hover {
-      text-decoration: underline;
-    }
+  /* Navbar fixed */
+  .fixed-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: white;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+  }
+</style>
 
-    .form-control {
-      border-radius: 5px;
-    }
-  </style>
 </head>
 <body>
+  <!-- navbar Start -->
+  <div class="multi_dash_div fixed-navbar">
+    <div class="px-0">
+      <nav class="nav-bar">
+        <div class="d-flex col-md-12 py-1 mx-0 px-2 justify-content-between grocery-d-flex">
+          <div class="col-md-2">
+            <div class="logo d-flex">
+              <div>
+                <!-- <img src="img/logo1.png" /> -->
+              </div>
+              <span class="logo-title">BizVisitingCards</span>
+            </div>
+          </div>
+
+          <div class="col-md-4 grocery-navres my-auto offset-5 d-flex justify-content-end gap-3">
+            <div class="customer-support-res">
+              <span>Customer Helpline</span>
+              <span class="fw-bold d-block"><i class="fa-solid fa-phone"></i> 9090909090</span>
+            </div>
+
+            <span class="dropdown my-auto">
+              <div
+                class="nav-icon d-flex gap-2"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="img/pro.png.jpg" alt="" />
+                <!-- <i class="fa-solid fa-user"></i> -->
+                <h6 class="my-auto mob-hide-login">
+                  Login <i class="fa-solid fa-chevron-down"></i>
+                </h6>
+              </div>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li>
+                  <a class="dropdown-item px-2" onclick="Login()">
+                    <i class="fa-solid fa-right-from-bracket"></i>&nbsp;Login
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item px-2" onclick="SignUp()">
+                    <i class="fa-solid fa-right-from-bracket"></i>&nbsp;SignUp
+                  </a>
+                </li>
+              </ul>
+            </span>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="p-1 border" style="background-color: #f8f9fa">
+      <div>
+        <div
+          class="bg-white d-flex gap-5 px-3 categogy-nav-res"
+          style="box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%)"
+        >
+          <a href="navbar.html" id="Home_tab" class="text-center nav-btn py-2 border-0 text-decoration-none fs-7 text-dark fw-semibold"
+            >Home</a
+          >
+          <a
+            href="businesslisting.html"
+            id="Business_listing_tab"
+            class="text-center nav-btn py-2 border-0 text-decoration-none fs-7 text-dark fw-semibold"
+            >Business Listing</a
+          >
+          <a href="coupon.html" id="Coupon_tab" class="text-center nav-btn py-2 border-0 text-decoration-none fs-7 text-dark fw-semibold"
+            >Coupon</a
+          >
+          <a
+            href="advertisement.html"
+            id="Advertisement_tab"
+            class="text-center nav-btn py-2 border-0 text-decoration-none fs-7 text-dark fw-semibold"
+            >Advertisement</a
+          >
+          <a href="about.html" id="About_us_tab" class="text-center nav-btn py-2 border-0 text-decoration-none fs-7 text-dark fw-semibold"
+            >About Us</a
+          >
+          <a href="contact.html" id="Contact_us_tab" class="text-center nav-btn py-2 border-0 text-decoration-none fs-7 text-dark fw-semibold"
+            >Contact Us</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- navbar Ends -->
 
   <!-- Animated Bubbles -->
   <div class="bubble"></div>
@@ -162,41 +362,177 @@
   <div class="bubble"></div>
   <div class="bubble"></div>
 
-  <!-- Login Box -->
-  <div class="login-box text-center">
-    <h2>Login</h2>
-    <p><a href="#" class="text-primary text-decoration-none">Log in to your Account</a></p>
+ <!-- Login Box -->
+<main class="login-box text-center" role="main" aria-label="Login form">
+  <h2>Login</h2>
+  <p><a href="#" class="text-primary text-decoration-none">Log in to your Account</a></p>
 
-    <!-- Mobile Number -->
-    <div class="mb-3">
-      <input type="text" class="form-control" placeholder="Enter Your Registered Mobile Number">
-    </div>
-
-    <!-- Password -->
-    <div class="mb-3">
-      <input type="password" class="form-control" placeholder="Password">
-    </div>
-
-    <!-- Captcha -->
-    <div class="d-flex align-items-center justify-content-between mb-3">
-      <img src="https://dummyimage.com/150x50/dbdbdb/000&text=4936" alt="captcha" style="height: 50px; border: 1px solid #ccc;">
-      <button type="button" class="btn btn-refresh">Refresh</button>
-    </div>
-
-    <div class="mb-3">
-      <input type="text" class="form-control" placeholder="Enter captcha">
-    </div>
-
-    <!-- Login Button -->
-    <div class="d-grid">
-      <button type="submit" class="btn btn-login">Log In</button>
-    </div>
-
-    <!-- Register Link -->
-    <div class="register-link">
-      <a href="register.html">New User Click Here & Register</a>
-    </div>
+  <!-- Mobile Number -->
+  <div class="input-group mb-3">
+    <span class="input-group-text bg-white"><i class="fa-solid fa-phone"></i></span>
+    <input
+      type="tel"
+      class="form-control"
+      placeholder="Enter Your Registered Mobile Number"
+      inputmode="numeric"
+      pattern="[0-9]*"
+      aria-label="Mobile Number"
+    />
   </div>
+
+  <!-- Password with show/hide toggle -->
+  <div class="input-group mb-3">
+    <span class="input-group-text bg-white"><i class="fa-solid fa-lock"></i></span>
+    <input
+      type="password"
+      class="form-control"
+      placeholder="Password"
+      id="passwordInput"
+      aria-label="Password"
+    />
+    <span class="input-group-text bg-white" onclick="togglePassword()" style="cursor: pointer;">
+      <i id="togglePasswordIcon" class="fa-solid fa-eye"></i>
+    </span>
+  </div>
+
+  <!-- Captcha -->
+  <div class="captcha-container">
+    <img src="https://dummyimage.com/150x50/dbdbdb/000&text=4936" alt="captcha" />
+    <button type="button" class="btn btn-refresh" aria-label="Refresh Captcha">Refresh</button>
+  </div>
+
+  <div class="mb-3">
+    <input type="text" class="form-control" placeholder="Enter captcha" aria-label="Enter captcha" />
+  </div>
+
+  <!-- Login Button -->
+  <div class="d-grid">
+    <button type="submit" class="btn btn-login">Log In</button>
+  </div>
+
+  <!-- Register Link -->
+  <div class="register-link">
+    <a href="register.html">New User Click Here & Register</a>
+  </div>
+</main>
+
+
+  <!-- Footer Start -->
+    <footer
+      class="text-center text-lg-start bg-white text-white aos-init aos-animate footer-section position-relative"
+      data-aos="fade-up"
+      data-aos-easing="linear"
+      data-aos-duration="1500"
+      style="background: linear-gradient(to right, #00093c, #2d0b00)"
+    >
+      <section class="pt-5">
+        <div class="container-fluid text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3 text-secondary"></i>BizVisitingCards
+              </h6>
+              <p style="text-align: justify">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Obcaecati quia harum ullam, saepe fugiat ipsa laboriosam,
+                aspernatur assumenda commodi repellendus facere odio expedita
+                cumque velit nulla sequi, voluptatibus sapiente enim?
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+              <p>
+                <a
+                  href="#"
+                  class="text-decoration-none text-white"
+                  target="_blank"
+                  >Contact Us
+                </a>
+              </p>
+              <p>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="text-decoration-none text-white"
+                  >Example</a
+                >
+              </p>
+              <p>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="text-decoration-none text-white"
+                  >Terms & Condition</a
+                >
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p>
+                <i class="fas fa-home me-3 text-secondary"></i> BizVisitingCards
+              </p>
+              <p>
+                <i class="fas fa-envelope me-3 text-secondary"></i>
+                info@BizVisitingCards.com
+              </p>
+              <div class="d-flex justifyContentResFoot">
+                <div class="my-auto">
+                  <i class="fas fa-phone me-3 text-secondary"></i>
+                </div>
+                <div>
+                  <span class="d-block">+91 9999901234</span>
+                  <span class="d-block">+91 9999901234</span>
+                </div>
+              </div>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+
+      <!-- Copyright -->
+      <div
+        class="text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.025)"
+      >
+        © 2024 Copyright:
+        <a
+          class="text-reset fw-bold"
+          href="https://bitspanindia.com/"
+          target="_blank"
+          >BigOsoftware Team</a
+        >
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+    <!-- Footer Ends -->
+
+  <!-- Bootstrap 5 JS bundle (Popper + Bootstrap JS) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  function togglePassword() {
+    const passwordInput = document.getElementById("passwordInput");
+    const icon = document.getElementById("togglePasswordIcon");
+    const isPassword = passwordInput.type === "password";
+    passwordInput.type = isPassword ? "text" : "password";
+    icon.classList.toggle("fa-eye");
+    icon.classList.toggle("fa-eye-slash");
+  }
+</script>
 
 </body>
 </html>

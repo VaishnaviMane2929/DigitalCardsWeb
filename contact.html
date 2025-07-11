@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <title>Contact Us - LAXMI SOFTWARE TECHNOLOGY</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/navbar.css">
+  <style>
+     /* Root colors */
+  :root {
+    --primary: #0052D4;
+    --accent: #00c2ff;
+    --dark: #004aad;
+    --bg: #F9C953;
+    --text-dark: #333;
+  }
+
+  /* body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    color: var(--text-dark);
+  } */
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      width: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+    }
+    /* header section  */
+     .banner-section {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+    }
+
+    .banner-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(to right, rgba(0, 204, 204, 0.6), rgba(0, 102, 204, 0.6)),
+        url("https://www.shutterstock.com/image-photo/digital-technology-software-development-concept-600nw-2111828198.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 1;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .banner-content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: #fff;
+      text-align: center;
+    }
+
+    .banner-content h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin: 0;
+      color: white;
+      margin-top: 55px;
+    }
+
+    .breadcrumb-container {
+      background-color: #e9e9ee;
+      padding: 15px 20px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .breadcrumb-container a {
+      text-decoration: none;
+      color: #0071c5;
+    }
+
+    .breadcrumb-container strong {
+      color: #555;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(1.02); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 600px) {
+      .banner-content h1 {
+        font-size: 24px;
+      }
+    }
+
+
+    .breadcrumb-container {
+      background-color: #f9f9f9;
+      padding: 15px 20px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .breadcrumb-container a {
+      text-decoration: none;
+      color: #0071c5;
+    }
+
+    .breadcrumb-container strong {
+      color: #555;
+    }
+
+    .container-custom {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .contact-section {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    }
+
+    h1 {
+      color: #0071c5;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .btn-yellow {
+      background-color: #ffc400;
+      color: white;
+      font-weight: bold;
+      border: none;
+    }
+
+    .btn-yellow:hover {
+      background-color: #e6b200;
+    }
+
+    .form-control:focus {
+      border-color: #0071c5;
+      box-shadow: 0 0 0 0.2rem rgba(0, 113, 197, 0.25);
+    }
+
+    .map-responsive {
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      position: relative;
+      height: 0;
+      border-radius: 8px;
+    }
+
+    .map-responsive iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    @media (max-width: 768px) {
+      .contact-info {
+        margin-top: 30px;
+      }
+    }
+
+    /* Section title container */
+  .section-title {
+    padding: 24px 20px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-left: 4px solid #96a4b4;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .section-title .hash {
+    color: var(--primary);
+    font-weight: 900;
+    font-size: 1.8rem;
+  }
+
+  .section-title h2 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #222;
+  }
+
+  .section-title p {
+    margin: 0 0 0 8px;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #444;
+  }
+
+  /* Main container for table + preview */
+  .main-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 15px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Pricing table container */
+  .pricing-table {
+    flex: 1 1 500px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgb(0 0 0 / 0.1);
+    overflow-x: auto;
+  }
+
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    min-width: 720px;
+  }
+
+  thead tr {
+    background: linear-gradient(to right, var(--accent), var(--dark));
+    color: white;
+  }
+
+  thead th {
+    padding: 8px 10px;
+    font-weight: 700;
+    text-align: center;
+    border: 1px solid #d0d0d0;
+    white-space: nowrap;
+  }
+
+  tbody td {
+    padding: 6px 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+
+  tbody tr:nth-child(even) {
+    background: #f3f6fa;
+  }
+
+  /* Limit offer column */
+  .limit-offer {
+    background: #b04210;
+    color: #fff;
+  }
+
+  /* Preview container */
+  .preview-section {
+    flex: 1 1 320px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgb(0 0 0 / 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .preview-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 0.2);
+  }
+
+  /* Buttons container */
+  .buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Button styles */
+  button {
+    cursor: pointer;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    min-width: 140px;
+    padding: 12px 22px;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .btn-primary {
+    background-color: var(--primary);
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background-color: #003b8f;
+  }
+
+  .btn-outline {
+    background-color: white;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+  }
+
+  .btn-outline:hover {
+    background-color: var(--primary);
+    color: white;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 900px) {
+    .main-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .pricing-table,
+    .preview-section {
+      max-width: 100%;
+    }
+    table {
+      min-width: 600px;
+      font-size: 0.75rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .section-title h2 {
+      font-size: 1.4rem;
+    }
+    .section-title p {
+      font-size: 0.9rem;
+    }
+    table {
+      min-width: 500px;
+      font-size: 0.7rem;
+    }
+    button {
+      min-width: 120px;
+      font-size: 0.9rem;
+      padding: 10px 18px;
+    }
+  }
+  </style>
+</head>
+<body>
+<!-- header section  -->
+  <!-- navbar Start -->
+    <div class="multi_dash_div fixed-navbar">
+      <div class="px-0">
+        <nav class="nav-bar">
+          <div
+            class="d-flex col-md-12 py-1 mx-0 px-2 justify-content-between grocery-d-flex"
+          >
+            <div class="col-md-2">
+              <div class="logo d-flex">
+                <div>
+                  <!-- <img src="img/logo1.png" /> -->
+                </div>
+                <span class="logo-title">BizVisitingCards</span>
+              </div>
+            </div>
+
+            <div
+              class="col-md-4 grocery-navres my-auto offset-5 d-flex justify-content-end gap-3"
+            >
+              <div class="customer-support-res">
+                <span>Customer Helpline</span>
+                <span class="fw-bold d-block"
+                  ><i class="fa-solid fa-phone"></i> 9090909090
+                </span>
+              </div>
+
+              <span class="dropdown my-auto">
+                <div
+                  class="nav-icon d-flex gap-2"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img src="img/pro.png.jpg" alt="" />
+                  <!-- <i class="fa-solid fa-user"></i> -->
+                  <h6 class="my-auto mob-hide-login">
+                    Login <i class="fa-solid fa-chevron-down"></i>
+                  </h6>
+                </div>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li>
+                    <a class="dropdown-item px-2" onclick="Login()">
+                      <i class="fa-solid fa-right-from-bracket"></i
+                      >&nbsp;Login</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item px-2" onclick="SignUp()">
+                      <i class="fa-solid fa-right-from-bracket"></i
+                      >&nbsp;SignUp</a
+                    >
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="p-1 border" style="background-color: #f8f9fa">
+        <div class="">
+          <div
+            class="bg-white d-flex gap-5 px-3 categogy-nav-res"
+            style="box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%)"
+          >
+            <a
+              href="navbar.html"
+              id="Home_tab"
+              class="text-center nav-btn py-3"
+            >
+              <!-- <img src="https://gotejaga.com/assest/img/online-shopping.png" /> -->
+              <i class="fa-solid fa-house"></i>
+              <span>Home</span>
+            </a>
+            <a
+              href="Example.html"
+              id="Example_tab"
+              class="text-center nav-btn py-3"
+            >
+              <!-- <img src="https://gotejaga.com/assest/img/fast-food.png" /> -->
+              <i class="fa-solid fa-thumbs-up"></i>
+              <span>Example</span>
+            </a>
+            <a href="Pricing.html" class="text-center nav-btn py-3">
+              <!-- <img src="https://gotejaga.com/assest/img/job.png" /> -->
+              <i class="fa-solid fa-indian-rupee-sign"></i>
+              <span>Pricing</span>
+            </a>
+            <a href="Howitworks.html" class="text-center nav-btn py-3">
+              <!-- <img src="https://gotejaga.com/assest/img/wedding.png" /> -->
+              <i class="fa-solid fa-circle-question"></i>
+              <span>How It Work's</span>
+            </a>
+
+            <a href="Service.html" class="text-center nav-btn py-3">
+              <!-- <img src="https://gotejaga.com/assest/img/customer-service.png" /> -->
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span>Services</span>
+            </a>
+            <a href="Contact.html" class="text-center nav-btn py-3">
+              <!-- <img src="https://gotejaga.com/assest/img/cab.png" /> -->
+              <i class="fa-solid fa-phone"></i>
+              <span>Contact</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- navbar Ends -->
+<!-- Banner Section -->
+  <div class="banner-section">
+    <div class="banner-overlay"></div>
+    <div class="banner-content">
+      <h1>Contact Us</h1>
+    </div>
+  </div>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb-container">
+    <a href="navbar.html">Home</a> / <strong>Contact Us</strong>
+  </div>
+
+<div class="container-custom">
+ 
+
+  <div class="row contact-section">
+    <!-- Form Column -->
+    <div class="col-md-6">
+      <form>
+        <div class="mb-3">
+          <label class="form-label">First name</label>
+          <input type="text" class="form-control" value="Johnson" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Last name</label>
+          <input type="text" class="form-control" value="Kc" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Mobile</label>
+          <input type="text" class="form-control" value="xxxx xxxxx" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" value="example@email.com" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Your message</label>
+          <textarea class="form-control" rows="4" placeholder="Type your message here"></textarea>
+        </div>
+        <button type="submit" class="btn btn-yellow w-100">SEND</button>
+      </form>
+    </div>
+
+    <!-- Info Column -->
+    <div class="col-md-6 contact-info">
+  <h4><strong>BigOSoftware</strong></h4>
+  <p>403, Silverstone Arcade, Beside D-Mart Shopping Center,<br>
+    Causeway Road, Singanpore, Surat – 395004 (GJ) India</p>
+  <p><strong>Phone:</strong> +91 8100 82 82 82 / +91 9377 05 9377 / +91 9377 06 9377</p>
+
+  <div class="map-responsive mt-3">
+    <iframe 
+      src="https://www.google.com/maps?q=Ahilyanagar,+Ahmednagar,+Maharashtra,+India&output=embed" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+
+  </div>
+</div>
+
+<!-- pricing contents -->
+
+   <!-- Footer Start -->
+    <footer
+      class="text-center text-lg-start bg-white text-white aos-init aos-animate footer-section position-relative"
+      data-aos="fade-up"
+      data-aos-easing="linear"
+      data-aos-duration="1500"
+      style="background: linear-gradient(to right, #00093c, #2d0b00)"
+    >
+      <section class="pt-5">
+        <div class="container-fluid text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3 text-secondary"></i>BizVisitingCards
+              </h6>
+              <p style="text-align: justify">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Obcaecati quia harum ullam, saepe fugiat ipsa laboriosam,
+                aspernatur assumenda commodi repellendus facere odio expedita
+                cumque velit nulla sequi, voluptatibus sapiente enim?
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+              <p>
+                <a
+                  href="#"
+                  class="text-decoration-none text-white"
+                  target="_blank"
+                  >Contact Us
+                </a>
+              </p>
+              <p>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="text-decoration-none text-white"
+                  >Example</a
+                >
+              </p>
+              <p>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="text-decoration-none text-white"
+                  >Terms & Condition</a
+                >
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p>
+                <i class="fas fa-home me-3 text-secondary"></i> BizVisitingCards
+              </p>
+              <p>
+                <i class="fas fa-envelope me-3 text-secondary"></i>
+                info@BizVisitingCards.com
+              </p>
+              <div class="d-flex justifyContentResFoot">
+                <div class="my-auto">
+                  <i class="fas fa-phone me-3 text-secondary"></i>
+                </div>
+                <div>
+                  <span class="d-block">+91 9999901234</span>
+                  <span class="d-block">+91 9999901234</span>
+                </div>
+              </div>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+
+      <!-- Copyright -->
+      <div
+        class="text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.025)"
+      >
+        © 2024 Copyright:
+        <a
+          class="text-reset fw-bold"
+          href="https://bitspanindia.com/"
+          target="_blank"
+          >BigOsoftware Team</a
+        >
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+    <!-- Footer Ends -->
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
