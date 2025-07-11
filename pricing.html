@@ -3,12 +3,200 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
   <title>Digital Card Hero</title>
+
+<link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <link rel="stylesheet" href="css/navbar.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.4.0/uicons-thin-rounded/css/uicons-thin-rounded.css"
+    />
+
+    <!-- Optional: icon font (Flaticon UIcons) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.4.0/uicons-thin-rounded/css/uicons-thin-rounded.css"
+    />
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+   <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CDN (Optional) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="pricing.css">
   <link rel="stylesheet" href="css/navbar.css">
-  
+  <style>
+
+    .hero-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      /* background-color: rgba(6, 74, 235, 0.4);  */
+      background: linear-gradient(135deg, #4f46e5, #0ea5e9);
+      color: white;
+    }
+
+    .hero-img {
+      max-width: 100%;
+      border-radius: 1.5rem;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-heading {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .hero-subheading {
+      font-size: 1.75rem;
+      color: #fde047;
+      font-weight: 600;
+    }
+
+    .hero-paragraph {
+      font-size: 1.1rem;
+      color: #e2e8f0;
+    }
+
+    .btn-custom {
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 12px;
+      margin: 10px 10px 0 0;
+    }
+
+    .btn-yellow {
+      background-color: #fde047;
+      color: #000;
+    }
+
+    .btn-white {
+      background-color: #fff;
+      color: #000;
+    }
+
+    @media (max-width: 768px) {
+      .hero-heading {
+        font-size: 2rem;
+      }
+
+      .hero-subheading {
+        font-size: 1.4rem;
+      }
+
+      .btn-custom {
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
+
+
+
+     .card-dark {
+      background-color: #1e1e1e;
+      border: none;
+      border-radius: 1rem;
+      text-align: center;
+      padding: 1.5rem;
+      height: 100%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-dark:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+
+    .card-dark h5 {
+      font-weight: 600;
+      margin-top: 1rem;
+      color: #facc15; /* Gold color for headings */
+    }
+
+    .card-dark ul {
+      list-style: none;
+      padding: 0;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-dark ul li {
+      padding: 5px 0;
+      color: #d1d5db;
+    }
+
+    .btn-buy {
+      background-color: #0ea5e9;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 16px;
+    }
+
+    .btn-buy:hover {
+      background-color: #0284c7;
+    }
+
+    .icon-circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+    }
+
+    .icon-circle i {
+      font-size: 1.5rem;
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
  <!-- navbar Start -->
@@ -121,25 +309,39 @@
     </div>
     <!-- navbar Ends -->
 <section class="hero-section">
-  <div class="hero-content container">
-    <div class="hero-image">
-      <img src="https://digitalcards.info/DigitalCardsMain/images/iphone_digitalcard.gif" alt="Digital Card" />
-    </div>
-    <div class="hero-text">
-      <h1>Just Do it !</h1>
-      <h2>Create Your Digital Cards</h2>
-      <p>
-        A digital card is an online hosted, digital virtual representation of any plastic card.
-        A digital card, unlike a plastic card, doesn't require any physical representation.
-      </p>
-      <div class="hero-buttons mt-3">
-        <button class="btn btn-custom btn-yellow">Login / Register</button>
-        <button class="btn btn-custom btn-blue">Online Training</button>
-        <button class="btn btn-custom btn-white">Live Demo</button>
+  <div class="container">
+    <div class="row align-items-center text-center text-md-start">
+      
+      <!-- Image -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="https://digitalcards.info/DigitalCardsMain/images/iphone_digitalcard.gif" alt="Digital Card" class="hero-img">
       </div>
+
+      <!-- Text -->
+      <div class="col-md-6">
+        <h1 class="hero-heading">Just Do it !</h1>
+        <h2 class="hero-subheading">Create Your Digital Cards</h2>
+        <p class="hero-paragraph mt-3">
+          A digital card is an online hosted, digital virtual representation of any plastic card.
+          Unlike a plastic card, it doesn't require any physical representation.
+        </p>
+        <div class="mt-4">
+  <!-- Login/Register Button -->
+  <a href="login.html" class="btn btn-custom btn-yellow">Login / Register</a>
+
+  <!-- Online Training Button -->
+  <a href="training.html" class="btn btn-custom btn-yellow">Online Training</a>
+
+  <!-- Live Demo Button -->
+  <a href="demo.html" class="btn btn-custom btn-white">Live Demo</a>
+</div>
+
+      </div>
+
     </div>
   </div>
 </section>
+
 <div class="container my-5">
   <div class="row">
     <!-- Left Content Section -->
@@ -190,70 +392,82 @@
   </div>
 </div>
 
-<!-- hexagoanal content -->
- <div class="container">
-  <div class="features">
+<div class="container py-5">
+  <div class="row g-4">
 
-    <!-- Feature 1 -->
-    <div class="feature">
-      <div class="hexagon">
-        <img src="https://cdn-icons-png.flaticon.com/512/3534/3534039.png" alt="Business Consulting" />
+    <!-- Card 1 -->
+    <div class="col-sm-6 col-lg-3">
+      <div class="card-dark">
+        <div class="icon-circle mb-3">
+          <i class="bi bi-telephone-fill"></i>
+        </div>
+        <h5>Business Card</h5>
+        <ul>
+          <li>1999 / 1 Year</li>
+          <li>7499 / 5 Years</li>
+          <li>Direct Call / Email / WhatsApp</li>
+          <li>Website / GMB / Location</li>
+          <li>eCard Save & More</li>
+        </ul>
+        <button class="btn btn-buy">Buy Now</button>
       </div>
-      <h3>Business Consulting</h3>
-      <p>Our company only thrives on repeat business and you would agree if our customer were not happy will they come back to us?</p>
     </div>
 
-    <!-- Arrow 1 -->
-    <svg class="arrow arrow1" viewBox="0 0 140 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M10 90 Q70 -10 130 90" stroke="#0da4b8" stroke-width="3" stroke-dasharray="8 5" />
-      <circle cx="130" cy="90" r="10" fill="#0da4b8" />
-      <path d="M125 85 L130 90 L120 95" stroke="white" stroke-width="2" fill="none" />
-    </svg>
-
-    <!-- Feature 2 -->
-    <div class="feature">
-      <div class="hexagon">
-        <img src="https://cdn-icons-png.flaticon.com/512/2250/2250432.png" alt="Fusion Design" />
+    <!-- Card 2 -->
+    <div class="col-sm-6 col-lg-3">
+      <div class="card-dark">
+        <div class="icon-circle mb-3">
+          <i class="bi bi-person-lines-fill"></i>
+        </div>
+        <h5>Digital Biodata</h5>
+        <ul>
+          <li>499 / 1 Year</li>
+          <li>1499 / 5 Years</li>
+          <li>Biodata + Family Info</li>
+          <li>Work, Sibling, Gallery</li>
+          <li>Contact Details & More</li>
+        </ul>
+        <button class="btn btn-buy">Buy Now</button>
       </div>
-      <h3>Fusion Design</h3>
-      <p>We provide a vast array of top class software's to different Industries. The large base of satisfied clients is the biggest evidence of our work</p>
     </div>
 
-    <!-- Arrow 2 -->
-    <svg class="arrow arrow2" viewBox="0 0 140 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M10 90 Q70 -10 130 90" stroke="#0da4b8" stroke-width="3" stroke-dasharray="8 5" />
-      <circle cx="130" cy="90" r="10" fill="#0da4b8" />
-      <path d="M125 85 L130 90 L120 95" stroke="white" stroke-width="2" fill="none" />
-    </svg>
-
-    <!-- Feature 3 -->
-    <div class="feature">
-      <div class="hexagon">
-        <img src="https://cdn-icons-png.flaticon.com/512/2527/2527907.png" alt="Create Digital Cards" />
+    <!-- Card 3 -->
+    <div class="col-sm-6 col-lg-3">
+      <div class="card-dark">
+        <div class="icon-circle mb-3">
+          <i class="bi bi-images"></i>
+        </div>
+        <h5>Photo Post</h5>
+        <ul>
+          <li>1999 / 1 Year</li>
+          <li>7499 / 5 Years</li>
+          <li>Photo & Frame Collection</li>
+          <li>Custom Name & Logo</li>
+        </ul>
+        <button class="btn btn-buy">Buy Now</button>
       </div>
-      <h3>Create Digital Cards</h3>
-      <p>A digital card is an online hosted, digital virtual representation of any plastic card. A digital card doesn't require any physical representation.</p>
     </div>
 
-    <!-- Arrow 3 -->
-    <svg class="arrow arrow3" viewBox="0 0 140 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M10 90 Q70 -10 130 90" stroke="#0da4b8" stroke-width="3" stroke-dasharray="8 5" />
-      <circle cx="130" cy="90" r="10" fill="#0da4b8" />
-      <path d="M125 85 L130 90 L120 95" stroke="white" stroke-width="2" fill="none" />
-    </svg>
-
-    <!-- Feature 4 -->
-    <div class="feature">
-      <div class="hexagon">
-        <img src="https://cdn-icons-png.flaticon.com/512/138/138313.png" alt="Great Services" />
+    <!-- Card 4 -->
+    <div class="col-sm-6 col-lg-3">
+      <div class="card-dark">
+        <div class="icon-circle mb-3">
+          <i class="bi bi-calendar-event-fill"></i>
+        </div>
+        <h5>Save The Date</h5>
+        <ul>
+          <li>999 / 1 Month</li>
+          <li>1999 / 1 Year</li>
+          <li>7499 / 5 Years</li>
+          <li>Map, Reminders, Countdown</li>
+          <li>Gallery, Time & More</li>
+        </ul>
+        <button class="btn btn-buy">Buy Now</button>
       </div>
-      <h3>Great Services</h3>
-      <p>We would never compromise on the quality. At Digital Cards excellent quality is our promise and forms the core of our delivery.</p>
     </div>
 
   </div>
 </div>
-<!-- next div digital card heading  -->
 
 
   <div class="slanted-banner">

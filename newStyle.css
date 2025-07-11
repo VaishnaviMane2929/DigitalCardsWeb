@@ -1,0 +1,128 @@
+/* Reset & base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Footer Styles */
+.footer-section {
+  background: linear-gradient(90deg, #00093c, #2d0b00);
+  color: #fff;
+  padding: 50px 20px 20px;
+  font-size: 16px;
+}
+
+.footer-content .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-title {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.footer-title .icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #ffb400; /* warm accent */
+  font-size: 24px;
+}
+
+/* About text */
+.about p {
+  text-align: justify;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* Useful Links */
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links ul li {
+  margin-bottom: 12px;
+}
+
+.links ul li a {
+  color: #eee;
+  transition: color 0.3s ease;
+}
+
+.links ul li a:hover {
+  color: #ffb400;
+  text-decoration: underline;
+}
+
+/* Contact Info */
+.contact p,
+.contact .phone {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ccc;
+  margin-bottom: 12px;
+}
+
+.contact .icon {
+  color: #ffb400;
+  font-size: 18px;
+}
+
+.contact .phone div span {
+  display: block;
+  line-height: 1.4;
+}
+
+/* Footer bottom bar */
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  padding: 15px 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  color: #ddd;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-bottom a {
+  color: #ffb400;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-row {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
