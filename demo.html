@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Login | BigOsoftwares</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-  <!-- Bootstrap 5 CDN -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- Bootstrap -->
 <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -58,271 +59,159 @@
       href="https://cdn-uicons.flaticon.com/2.4.0/uicons-thin-rounded/css/uicons-thin-rounded.css"
     />
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/navbar.css" />
-  <link rel="stylesheet" href="../">
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Font -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/navbar.css">
 
 
- <style>
-  * {
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-  }
-
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  .page-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-
-  body {
-    background: linear-gradient(to bottom, #d9f3ff, #e1f7ff);
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-
-  /* ✅ NEW: content wrapper to push footer to bottom */
-  .content-wrapper {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 120px; /* space for navbar */
-  padding-bottom: 80px; /* space before footer */
-}
-
-  /* Aqua Bubble Animation Background */
-  .bubble {
-    position: fixed;
-    border-radius: 50%;
-    background: rgba(0, 123, 255, 0.1);
-    animation: floatBubble 20s infinite ease-in-out;
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .bubble:nth-child(1) {
-    width: 80px;
-    height: 80px;
-    left: 10%;
-    bottom: -100px;
-    animation-delay: 0s;
-  }
-
-  .bubble:nth-child(2) {
-    width: 100px;
-    height: 100px;
-    left: 40%;
-    bottom: -150px;
-    animation-delay: 3s;
-  }
-
-  .bubble:nth-child(3) {
-    width: 60px;
-    height: 60px;
-    left: 70%;
-    bottom: -80px;
-    animation-delay: 6s;
-  }
-
-  .bubble:nth-child(4) {
-    width: 90px;
-    height: 90px;
-    left: 85%;
-    bottom: -120px;
-    animation-delay: 1.5s;
-  }
-
-  .bubble:nth-child(5) {
-    width: 50px;
-    height: 50px;
-    left: 25%;
-    bottom: -60px;
-    animation-delay: 4.5s;
-  }
-  .input-group-text {
-  border-radius: 5px 0 0 5px;
-  background-color: #f8f9fa;
-  border: 1px solid #ced4da;
-}
-
-.input-group .form-control {
-  border-left: none;
-}
-
-
-  @keyframes floatBubble {
-    0% {
-      transform: translateY(0) scale(1);
-      opacity: 0.7;
+  <style>
+     body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #fff;
+      color: #444;
     }
-    50% {
-      opacity: 1;
-      transform: translateY(-300px) scale(1.1);
-    }
-    100% {
-      transform: translateY(-600px) scale(0.9);
-      opacity: 0;
-    }
-  }
-
-  /* Login Box */
-  .login-box {
-    max-width: 400px;
-    width: 90%;
-    background-color: #fff;
-    padding: 30px 20px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 10;
-    animation: slideFadeIn 1s ease forwards;
-    opacity: 0;
-    transform: translateY(30px);
-    margin: 0 auto;
-    margin-top: 120px;
-    
-  }
-
-  @keyframes slideFadeIn {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .login-box h2 {
-    font-weight: bold;
-    margin-bottom: 15px;
-    font-size: 1.8rem;
-  }
-
-  .btn-refresh {
-    background-color: #f39c12;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    white-space: nowrap;
-    font-size: 0.9rem;
-    flex-shrink: 0;
-  }
-
-  .btn-refresh:hover {
-    background-color: #e67e22;
-  }
-
-  .btn-login {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    padding: 10px;
-    font-size: 1.1rem;
-  }
-
-  .btn-login:hover {
-    background-color: #45a049;
-  }
-
-  .register-link {
-    text-align: center;
-    margin-top: 15px;
-    font-size: 0.95rem;
-  }
-
-  .register-link a {
-    text-decoration: none;
-    color: #007bff;
-    font-weight: 500;
-  }
-
-  .register-link a:hover {
-    text-decoration: underline;
-  }
-
-  .form-control {
-    border-radius: 5px;
-    font-size: 1rem;
-    padding: 10px;
-  }
-
-  .captcha-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-    gap: 10px;
-  }
-
-  .captcha-container img {
-    height: 50px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    flex-shrink: 0;
-    width: auto;
-    max-width: 40%;
-  }
-
-  /* Responsive tweaks */
-  @media (max-width: 480px) {
-    .login-box {
-      padding: 20px 15px;
-      width: 95%;
-      max-width: 350px;
+     .header-banner {
+      position: relative;
+      height: 250px;
+      background: 
+        linear-gradient(rgba(0, 123, 255, 0.6), rgba(0, 123, 255, 0.6)),
+        url('https://www.shutterstock.com/image-photo/digital-technology-software-development-concept-600nw-2111828198.jpg') center center / cover no-repeat;
     }
 
-    .login-box h2 {
-      font-size: 1.5rem;
+    .breadcrumb-container {
+      background-color: #f1f3f6;
+      padding: 15px 0;
     }
 
-    .btn-login {
+    .breadcrumb-item + .breadcrumb-item::before {
+      content: "/";
+      padding: 0 0.5rem;
+      color: #6c757d;
+    }
+
+    .breadcrumb-item a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .breadcrumb-item.active {
+      font-weight: 600;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .header-banner {
+        height: 180px;
+      }
+    }
+
+    .breadcrumb-container {
+      background-color: #f1f2f6;
+      padding: 15px 0;
+    }
+
+    .breadcrumb a {
+      color: #0072ff;
+      text-decoration: none;
+    }
+
+    .breadcrumb .active {
+      font-weight: bold;
+      color: #555;
+    }
+    /* live div content */
+      .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px 5%;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .text-section {
+      flex: 1 1 500px;
+      padding-right: 40px;
+      min-width: 300px;
+    }
+
+    .text-section h2 {
+      color: #0071CE;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .text-section h3 {
+      font-weight: normal;
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .text-section p {
       font-size: 1rem;
-      padding: 12px;
+      color: #555;
+      margin-bottom: 15px;
+      max-width: 700px;
     }
 
-    .captcha-container img {
-      max-width: 45%;
+    .image-section {
+      flex: 1 1 400px;
+      text-align: center;
     }
 
-    .btn-refresh {
-      padding: 6px 12px;
-      font-size: 0.85rem;
+    .image-section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
     }
 
-    .content-wrapper {
-      padding-top: 100px;
-      padding-bottom: 80px;
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .text-section {
+        padding-right: 0;
+      }
     }
-  }
 
-  /* Navbar fixed */
-  .fixed-navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-    background: white;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
-  }
-</style>
-
+    .feature-list li {
+      margin-bottom: 10px;
+    }
+    .card-preview {
+      background: linear-gradient(to right, #ff4da6, #007bff);
+      padding: 30px;
+      color: white;
+      border-radius: 10px;
+    }
+    .digital-tag {
+      position: absolute;
+      top: 20px;
+      left: -20px;
+      background: #004c99;
+      color: white;
+      padding: 5px 15px;
+      transform: rotate(-45deg);
+      font-weight: bold;
+    }
+    .card-image {
+      max-width: 100%;
+      height: auto;
+      margin: 10px 0;
+    }
+  </style>
 </head>
 <body>
-  <!-- navbar Start -->
+     <!-- navbar Start -->
     <div class="multi_dash_div fixed-navbar">
       <div class="px-0">
         <nav class="nav-bar">
@@ -433,72 +322,73 @@
 
     <!-- navbar Ends -->
 
-  <!-- Animated Bubbles -->
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-
- <!-- Login Box -->
-<main class="login-box text-center" role="main" aria-label="Login form">
-  <h2>Login</h2>
-  <p><a href="#" class="text-primary text-decoration-none">Log in to your Account</a></p>
-
-  <!-- Mobile Number -->
-  <div class="input-group mb-3">
-    <span class="input-group-text bg-white"><i class="fa-solid fa-phone"></i></span>
-    <input
-      type="tel"
-      class="form-control"
-      placeholder="Enter Your Registered Mobile Number"
-      inputmode="numeric"
-      pattern="[0-9]*"
-      aria-label="Mobile Number"
-    />
+    <!-- demo page start -->
+      <!-- Header Banner -->
+  <div class="header-banner d-flex align-items-center justify-content-center text-white">
+    <!-- Optional: <h1 class="display-6">Live Demo</h1> -->
   </div>
 
-  <!-- Password with show/hide toggle -->
-  <div class="input-group mb-3">
-    <span class="input-group-text bg-white"><i class="fa-solid fa-lock"></i></span>
-    <input
-      type="password"
-      class="form-control"
-      placeholder="Password"
-      id="passwordInput"
-      aria-label="Password"
-    />
-    <span class="input-group-text bg-white" onclick="togglePassword()" style="cursor: pointer;">
-      <i id="togglePasswordIcon" class="fa-solid fa-eye"></i>
-    </span>
+  <!-- Breadcrumb Section -->
+  <div class="breadcrumb-container text-center">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item"><a href="navbar.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Live Demo</li>
+      </ol>
+    </nav>
+  </div>
+   <div class="container">
+    <div class="text-section">
+      <h2>Live Demo</h2>
+      <h3>What Is Digital Cards ?</h3>
+      <p>
+        A digital card is an online hosted, digital virtual representation of any plastic card.
+        A digital card, unlike a plastic card, doesn't require any physical representation.
+      </p>
+      <p>
+        Digital Card is the standard for digital business cards that works on Smartphones, Tablets and computers with NO APP required.
+        Digital Card creates a digital hub where your customers can pick and choose how they connect with you.
+        For example, you can list your standard contact information, a bio telling a little more about yourself,
+        all of your social networks in one place and an info center, which allows you to create a digital brochure.
+      </p>
+    </div>
+    <div class="image-section">
+      <img src="https://digitalcards.info/DigitalCardsMain/images/AllProduct.gif" alt="My Digital ECards">
+    </div>
   </div>
 
-  <!-- Captcha -->
-  <div class="captcha-container">
-  <img id="captchaImage" src="https://bizvisitingcard.com/captcha_images/1752398882.1512.jpg" alt="captcha" />
-  <button type="button" class="btn btn-refresh" aria-label="Refresh Captcha" onclick="refreshCaptcha()">Refresh</button>
+
+  <div class="container py-5">
+  <div class="row g-5 align-items-center">
+    <!-- Left Column -->
+    <div class="col-md-6">
+      <h2 class="text-primary fw-bold">Personal Visiting Card</h2>
+      <p class="text-muted fs-5">Features</p>
+      <p>Create Your Personal Card with Your Personal Information.</p>
+      <ul class="feature-list list-unstyled">
+        <li>➤ Direct Call</li>
+        <li>➤ Direct EMail</li>
+        <li>➤ Direct WhatsApp, Skype, Facebook, Instagram</li>
+        <li>➤ Direct To Save eCard in your Mobile & Many More...</li>
+      </ul>
+    </div>
+
+    <!-- Right Column -->
+    <div class="col-md-6">
+      <div class="position-relative card-preview text-center">
+        <div class="digital-tag">Digital Cards</div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy5q_Forgi8I-pMNJ1T1qtouHHS0y5ie9Ab-OlF9ejuQ4WgTF4nabyrpJjvWPTFYppnzg&usqp=CAU" class="card-image" alt="Front Card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoecEpTo29bKSCSrbTxAlGUWP_khdmlkEjzw&s" class="card-image" alt="Back Card">
+        <h3 class="mt-3">My Personal Visiting Card</h3>
+      </div>
+    </div>
+  </div>
 </div>
 
 
 
 
-  <div class="mb-3">
-    <input type="text" class="form-control" placeholder="Enter captcha" aria-label="Enter captcha" />
-  </div>
-
-  <!-- Login Button -->
-  <div class="d-grid">
-    <button type="submit" class="btn btn-login">Log In</button>
-  </div>
-
-  <!-- Register Link -->
-  <div class="register-link">
-    <a href="register.html">New User Click Here & Register</a>
-  </div>
-</main>
-
-
-  <!-- Footer Start -->
+    <!-- Footer Start -->
     <footer
       class="text-center text-lg-start bg-white text-white aos-init aos-animate footer-section position-relative"
       data-aos="fade-up"
@@ -601,27 +491,5 @@
     </footer>
 
     <!-- Footer Ends -->
-
-  <!-- Bootstrap 5 JS bundle (Popper + Bootstrap JS) -->
-   <script>
-  function refreshCaptcha() {
-    const captchaImage = document.getElementById('captchaImage');
-    // Add a timestamp to the image URL to force refresh
-    const baseUrl = "https://bizvisitingcard.com/captcha_images/1752398882.1512.jpg";
-    captchaImage.src = baseUrl + "?t=" + new Date().getTime();
-  }
-</script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-  function togglePassword() {
-    const passwordInput = document.getElementById("passwordInput");
-    const icon = document.getElementById("togglePasswordIcon");
-    const isPassword = passwordInput.type === "password";
-    passwordInput.type = isPassword ? "text" : "password";
-    icon.classList.toggle("fa-eye");
-    icon.classList.toggle("fa-eye-slash");
-  }
-</script>
-
 </body>
 </html>

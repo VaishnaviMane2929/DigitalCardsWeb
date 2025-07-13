@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Login | BigOsoftwares</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-  <!-- Bootstrap 5 CDN -->
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- Bootstrap -->
 <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -58,271 +57,19 @@
       href="https://cdn-uicons.flaticon.com/2.4.0/uicons-thin-rounded/css/uicons-thin-rounded.css"
     />
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/navbar.css" />
-  <link rel="stylesheet" href="../">
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Font -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/navbar.css">
 
-
- <style>
-  * {
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-  }
-
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  .page-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-
-  body {
-    background: linear-gradient(to bottom, #d9f3ff, #e1f7ff);
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-
-  /* ✅ NEW: content wrapper to push footer to bottom */
-  .content-wrapper {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 120px; /* space for navbar */
-  padding-bottom: 80px; /* space before footer */
-}
-
-  /* Aqua Bubble Animation Background */
-  .bubble {
-    position: fixed;
-    border-radius: 50%;
-    background: rgba(0, 123, 255, 0.1);
-    animation: floatBubble 20s infinite ease-in-out;
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .bubble:nth-child(1) {
-    width: 80px;
-    height: 80px;
-    left: 10%;
-    bottom: -100px;
-    animation-delay: 0s;
-  }
-
-  .bubble:nth-child(2) {
-    width: 100px;
-    height: 100px;
-    left: 40%;
-    bottom: -150px;
-    animation-delay: 3s;
-  }
-
-  .bubble:nth-child(3) {
-    width: 60px;
-    height: 60px;
-    left: 70%;
-    bottom: -80px;
-    animation-delay: 6s;
-  }
-
-  .bubble:nth-child(4) {
-    width: 90px;
-    height: 90px;
-    left: 85%;
-    bottom: -120px;
-    animation-delay: 1.5s;
-  }
-
-  .bubble:nth-child(5) {
-    width: 50px;
-    height: 50px;
-    left: 25%;
-    bottom: -60px;
-    animation-delay: 4.5s;
-  }
-  .input-group-text {
-  border-radius: 5px 0 0 5px;
-  background-color: #f8f9fa;
-  border: 1px solid #ced4da;
-}
-
-.input-group .form-control {
-  border-left: none;
-}
-
-
-  @keyframes floatBubble {
-    0% {
-      transform: translateY(0) scale(1);
-      opacity: 0.7;
-    }
-    50% {
-      opacity: 1;
-      transform: translateY(-300px) scale(1.1);
-    }
-    100% {
-      transform: translateY(-600px) scale(0.9);
-      opacity: 0;
-    }
-  }
-
-  /* Login Box */
-  .login-box {
-    max-width: 400px;
-    width: 90%;
-    background-color: #fff;
-    padding: 30px 20px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 10;
-    animation: slideFadeIn 1s ease forwards;
-    opacity: 0;
-    transform: translateY(30px);
-    margin: 0 auto;
-    margin-top: 120px;
-    
-  }
-
-  @keyframes slideFadeIn {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .login-box h2 {
-    font-weight: bold;
-    margin-bottom: 15px;
-    font-size: 1.8rem;
-  }
-
-  .btn-refresh {
-    background-color: #f39c12;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    white-space: nowrap;
-    font-size: 0.9rem;
-    flex-shrink: 0;
-  }
-
-  .btn-refresh:hover {
-    background-color: #e67e22;
-  }
-
-  .btn-login {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    padding: 10px;
-    font-size: 1.1rem;
-  }
-
-  .btn-login:hover {
-    background-color: #45a049;
-  }
-
-  .register-link {
-    text-align: center;
-    margin-top: 15px;
-    font-size: 0.95rem;
-  }
-
-  .register-link a {
-    text-decoration: none;
-    color: #007bff;
-    font-weight: 500;
-  }
-
-  .register-link a:hover {
-    text-decoration: underline;
-  }
-
-  .form-control {
-    border-radius: 5px;
-    font-size: 1rem;
-    padding: 10px;
-  }
-
-  .captcha-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-    gap: 10px;
-  }
-
-  .captcha-container img {
-    height: 50px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    flex-shrink: 0;
-    width: auto;
-    max-width: 40%;
-  }
-
-  /* Responsive tweaks */
-  @media (max-width: 480px) {
-    .login-box {
-      padding: 20px 15px;
-      width: 95%;
-      max-width: 350px;
-    }
-
-    .login-box h2 {
-      font-size: 1.5rem;
-    }
-
-    .btn-login {
-      font-size: 1rem;
-      padding: 12px;
-    }
-
-    .captcha-container img {
-      max-width: 45%;
-    }
-
-    .btn-refresh {
-      padding: 6px 12px;
-      font-size: 0.85rem;
-    }
-
-    .content-wrapper {
-      padding-top: 100px;
-      padding-bottom: 80px;
-    }
-  }
-
-  /* Navbar fixed */
-  .fixed-navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-    background: white;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
-  }
-</style>
-
+    <title>Document</title>
 </head>
 <body>
-  <!-- navbar Start -->
+     <!-- navbar Start -->
     <div class="multi_dash_div fixed-navbar">
       <div class="px-0">
         <nav class="nav-bar">
@@ -433,72 +180,11 @@
 
     <!-- navbar Ends -->
 
-  <!-- Animated Bubbles -->
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-
- <!-- Login Box -->
-<main class="login-box text-center" role="main" aria-label="Login form">
-  <h2>Login</h2>
-  <p><a href="#" class="text-primary text-decoration-none">Log in to your Account</a></p>
-
-  <!-- Mobile Number -->
-  <div class="input-group mb-3">
-    <span class="input-group-text bg-white"><i class="fa-solid fa-phone"></i></span>
-    <input
-      type="tel"
-      class="form-control"
-      placeholder="Enter Your Registered Mobile Number"
-      inputmode="numeric"
-      pattern="[0-9]*"
-      aria-label="Mobile Number"
-    />
-  </div>
-
-  <!-- Password with show/hide toggle -->
-  <div class="input-group mb-3">
-    <span class="input-group-text bg-white"><i class="fa-solid fa-lock"></i></span>
-    <input
-      type="password"
-      class="form-control"
-      placeholder="Password"
-      id="passwordInput"
-      aria-label="Password"
-    />
-    <span class="input-group-text bg-white" onclick="togglePassword()" style="cursor: pointer;">
-      <i id="togglePasswordIcon" class="fa-solid fa-eye"></i>
-    </span>
-  </div>
-
-  <!-- Captcha -->
-  <div class="captcha-container">
-  <img id="captchaImage" src="https://bizvisitingcard.com/captcha_images/1752398882.1512.jpg" alt="captcha" />
-  <button type="button" class="btn btn-refresh" aria-label="Refresh Captcha" onclick="refreshCaptcha()">Refresh</button>
-</div>
 
 
 
 
-  <div class="mb-3">
-    <input type="text" class="form-control" placeholder="Enter captcha" aria-label="Enter captcha" />
-  </div>
-
-  <!-- Login Button -->
-  <div class="d-grid">
-    <button type="submit" class="btn btn-login">Log In</button>
-  </div>
-
-  <!-- Register Link -->
-  <div class="register-link">
-    <a href="register.html">New User Click Here & Register</a>
-  </div>
-</main>
-
-
-  <!-- Footer Start -->
+     <!-- Footer Start -->
     <footer
       class="text-center text-lg-start bg-white text-white aos-init aos-animate footer-section position-relative"
       data-aos="fade-up"
@@ -601,27 +287,5 @@
     </footer>
 
     <!-- Footer Ends -->
-
-  <!-- Bootstrap 5 JS bundle (Popper + Bootstrap JS) -->
-   <script>
-  function refreshCaptcha() {
-    const captchaImage = document.getElementById('captchaImage');
-    // Add a timestamp to the image URL to force refresh
-    const baseUrl = "https://bizvisitingcard.com/captcha_images/1752398882.1512.jpg";
-    captchaImage.src = baseUrl + "?t=" + new Date().getTime();
-  }
-</script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-  function togglePassword() {
-    const passwordInput = document.getElementById("passwordInput");
-    const icon = document.getElementById("togglePasswordIcon");
-    const isPassword = passwordInput.type === "password";
-    passwordInput.type = isPassword ? "text" : "password";
-    icon.classList.toggle("fa-eye");
-    icon.classList.toggle("fa-eye-slash");
-  }
-</script>
-
 </body>
 </html>
